@@ -16,3 +16,4 @@ Intermediate ===
 12: db.bounties.find({$and: [{captured: false},{client: 'Ayesha High Priestess of the Sovereign'}]})
 13: db.bounties.update({name: {$exists: true}}, {$inc: {reward: 333333}}, {multi: true})
 14: db.bounties.update({name: {$exists: true}}, {$mul: {reward: 2}}, {multi: true})
+15: db.bounties.update( {name: 'Han Solo'}, {$push: { hunters: 'Malcolm Reynolds'}})
