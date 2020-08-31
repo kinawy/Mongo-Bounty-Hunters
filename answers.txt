@@ -1,1 +1,18 @@
 Please replace this text with ~50 lines of terminal history.
+1: db.bounties.find()
+2: db.bounties.find({client: 'Time Bureau'})
+3: db.bounties.find({captured: true})
+4: db.bounties.findOne({name: 'Han Solo'})
+5: db.bounties.find({},{"name":1})
+6: db.bounties.remove({name: 'Starbuck'})
+7: db.bounties.remove({'_id': ObjectId('5f4d679ed2d94415448420c0')})
+
+Intermediate ===
+
+8: db.bounties.find({reward: {$gt: 100000}})
+9: db.bounties.find({ reward: {$lt: 1000 }})
+10: db.bounties.find({ hunters:'Nebula'})
+11: db.bounties.find({ ship: {$in: ['Waverider', 'Serenity']}})
+12: db.bounties.find({$and: [{captured: false},{client: 'Ayesha High Priestess of the Sovereign'}]})
+13: db.bounties.update({name: {$exists: true}}, {$inc: {reward: 333333}}, {multi: true})
+14: db.bounties.update({name: {$exists: true}}, {$mul: {reward: 2}}, {multi: true})
