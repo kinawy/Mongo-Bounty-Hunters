@@ -17,3 +17,4 @@ Intermediate ===
 13: db.bounties.update({name: {$exists: true}}, {$inc: {reward: 333333}}, {multi: true})
 14: db.bounties.update({name: {$exists: true}}, {$mul: {reward: 2}}, {multi: true})
 15: db.bounties.update( {name: 'Han Solo'}, {$push: { hunters: 'Malcolm Reynolds'}})
+16: db.bounties.update({ship: 'Waverider'}, {$push: {hunters: 'Bobba Fett'}})
